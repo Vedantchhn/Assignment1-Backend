@@ -29,9 +29,7 @@ sql.connect(config, (err) => {
   if (err) console.error('SQL connection error:', err);
 });
  
-app.get('/',async(res,res)=>{
-  res.send("Api Started Successfully")
-})
+
 app.get('/api/task2', async (req, res) => {
   try {
     const result = await sql.query('SELECT TOP 20 * FROM  [SalesLT].[Customer]');
